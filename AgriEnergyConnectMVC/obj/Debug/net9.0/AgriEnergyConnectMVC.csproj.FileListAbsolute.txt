@@ -445,7 +445,6 @@ C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\staticwebasse
 C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.AgriEnergyConnectMVC.props
 C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.AgriEnergyConnectMVC.props
 C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\AgriEner.415B1E57.Up2Date
 C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\AgriEnergyConnectMVC.dll
 C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\refint\AgriEnergyConnectMVC.dll
@@ -455,4 +454,5 @@ C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\ref\AgriEnerg
 C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
 C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\compressed\a7j83253qa-cpu7v2s2d9.gz
+C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\AgriEnergyConnectMVC.sourcelink.json
+C:\Dev\C#\Agri-EnergyConnect\AgriEnergyConnectMVC\obj\Debug\net9.0\compressed\a7j83253qa-2gdlt8hbyj.gz

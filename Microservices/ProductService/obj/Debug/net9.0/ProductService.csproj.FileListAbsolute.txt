@@ -165,3 +165,4 @@ C:\Dev\C#\Agri-EnergyConnect\Microservices\ProductService\obj\Debug\net9.0\refin
 C:\Dev\C#\Agri-EnergyConnect\Microservices\ProductService\obj\Debug\net9.0\ProductService.pdb
 C:\Dev\C#\Agri-EnergyConnect\Microservices\ProductService\obj\Debug\net9.0\ProductService.genruntimeconfig.cache
 C:\Dev\C#\Agri-EnergyConnect\Microservices\ProductService\obj\Debug\net9.0\ref\ProductService.dll
+C:\Dev\C#\Agri-EnergyConnect\Microservices\ProductService\obj\Debug\net9.0\ProductService.sourcelink.json
