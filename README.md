@@ -1,130 +1,122 @@
-# Agri-Energy Connect MVC Application
+# Agri-Energy Connect Application
 
 [![.NET 9 Build Status](https://img.shields.io/badge/.NET-9-blue.svg?style=for-the-badge&logo=.net&logoColor=white)](https://dotnet.microsoft.com/)
 [![License: No License](https://img.shields.io/badge/License-No%20License-red.svg?style=for-the-badge)](https://unlicense.org/)
 
-## 🎬 Youtube
+## 🎬 YouTube Video
 
 [![Watch the video](https://img.shields.io/badge/Watch-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)]([Link to your YouTube video about the app])
 
-## ✨ Features
+## ✨ Key Features
 
-**General Features:**
+Agri-Energy Connect offers these main functionalities:
 
-* ✅ **User Authentication:** Secure login and logout functionality for both employee and farmer roles, likely handled by an authentication microservice.
-* 🎨 **Responsive Design:** Utilizes Bootstrap for a consistent and responsive user interface across different devices.
-* **Theming:** Custom styling applied, including an agricultural-themed navbar and a visually engaging home page with a background image and prominent text.
+**For All Users:**
 
-**Employee Role:**
+* ✅ **Secure Login:** Keeps your account safe.
+* 📱 **Easy to Use Design:** Works well on computers, tablets, and phones.
+* 🎨 **Agricultural Theme:** Features a design that reflects farming and nature.
 
-* 🧑‍💼 **Farmer Registration:** Employees can register new farmers via an API call to a farmer management microservice.
-* 📜 **Farmer List:** Employees can view a list of all registered farmers fetched from the farmer management microservice.
-* 📦 **Product Management (Filtering):** Employees can filter products based on category, production date range, and the farmer who produced them, utilizing an API call to a product catalog microservice.
+**For Employees:**
 
-**Farmer Role:**
+* 🧑‍💼 **Register New Farmers:** Allows adding new farmers to the system.
+* 📜 **Farmer Directory:** A simple list of all registered farmers.
+* 🔍 **Find Products:** Easily search for products by type, date, and farmer.
 
-* 🚜 **My Products:** Farmers can add products and view a list of the products they have registered, retrieved via an API call to the product catalog microservice.
+**For Farmers:**
+
+* 🚜 **Manage My Products:** Add new products and see a list of your existing ones.
 
 **Home Page:**
 
-* 🏠 Displays a welcoming message with the application name "Agri-Energy Connect".
-* 🏷️ Includes a subheading: "Connecting Farmers with Clean Energy Solutions."
-* 🌄 Features a background image related to agriculture and energy.
+* 🏠 Welcomes you to "Agri-Energy Connect".
+* 🏷️ Briefly explains: "Connecting Farmers with Clean Energy Solutions."
+* 🌄 Features a relevant background image.
 
-## 🛠️ Microservices Architecture
+## ⚙️ How the System Works (Simplified)
 
-This application follows a microservices architecture, with the MVC application acting as a client to the following backend services:
+Agri-Energy Connect uses a main website and separate "tools" working behind the scenes. These tools help manage different parts of the application and store information.
 
-* 👤 **UserService:** Manages user authentication and user roles. Stores user data in its own SQLite database.
-* 📦 **ProductService:** Manages product information, including filtering. Stores product data in its own SQLite database.
+* **👤 User Service:** Handles who can log in and their roles (employee or farmer).
+* **📦 Product Service:** Manages all the details about the products.
 
-The MVC application communicates with these services via their respective RESTful HTTP APIs.
+The main website talks to these tools to show you information and let you do things within the application.
 
-## ⚙️ Technologies Used
+## 🛠️ Technologies Used
 
-![.NET 9](https://img.shields.io/badge/.NET-9-blue?style=for-the-badge&logo=.net&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
-![ASP.NET](https://img.shields.io/badge/.NET%20ASP.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
-![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+Here are the main technologies that power Agri-Energy Connect:
 
-## 🚀 Setup and Installation
+* **.NET 9:** A strong framework for building web applications.
+* **C#:** The primary programming language.
+* **HTML, CSS, JavaScript:** Standard languages for creating websites.
+* **Bootstrap:** Helps make the website look good on different devices.
+* **jQuery:** A tool that makes the website more interactive.
+* **SQLite:** A simple way for each "tool" to store its own information.
+* **Google Fonts:** Special fonts for better readability and style.
 
-Follow these steps to get the application running:
+## 🚀 Getting Started (For Developers)
 
-1.  **Clone the Repository:**
+If you want to run this application on your computer:
+
+1.  **Get the Code:** Download the project files.
     ```bash
     git clone [repository URL]
     cd AgriEnergyConnect
     ```
 
-    The repository is structured with an `AgriEnergyConnectMVC` folder containing the MVC application and a `Microservices` folder containing the source code for the backend microservices.
+2.  **Install Software:** Make sure you have the .NET 9 software installed ([https://dotnet.microsoft.com/download/dotnet/9.0](https://dotnet.microsoft.com/download/dotnet/9.0)).
 
-2.  **Prerequisites:**
-    * ✅ [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) installed on your machine.
-
-3.  **🏃 Running the Microservices:**
-    You need to run each microservice separately. Navigate to the directory of each microservice within the `Microservices` folder and run the following commands in separate terminal windows:
+3.  **Start the Backend Tools:** Open separate command prompts and run each of the following:
 
     ```bash
     cd Microservices/UserService
     dotnet build
     dotnet run
-    # Note the port this service runs on (e.g., https://localhost:5001).
+    # Note the web address (URL) shown here.
     ```
 
     ```bash
     cd Microservices/ProductService
     dotnet build
     dotnet run
-    # Note the port this service runs on (e.g., https://localhost:5002).
+    # Note the web address (URL) shown here.
     ```
 
-    Ensure that the microservices are running and accessible on their respective ports before starting the MVC application.
-
-4.  **⚙️ Configuring the MVC Application:**
-    The MVC application needs to know the base URLs of your running microservices. They are defined in the `Program.cs` file within the `AgriEnergyConnectMVC` folder. You will need to update the `Program.cs` with the correct URLs for each microservice:
+4.  **Tell the Website the Tool Addresses:** Go to the `AgriEnergyConnectMVC` folder and open the `Program.cs` file. Find the sections that look like this and replace the example addresses with the ones you noted in the previous step:
 
     ```csharp
     // AgriEnergyConnectMVC/Program.cs
 
     builder.Services.AddHttpClient("UserService", client =>
     {
-        client.BaseAddress = new Uri("https://localhost:5001"); // Replace with your UserService port
+        client.BaseAddress = new Uri("YOUR_USER_SERVICE_URL");
     });
 
     builder.Services.AddHttpClient("ProductService", client =>
     {
-        client.BaseAddress = new Uri("https://localhost:5002"); // Replace with your ProductService port
+        client.BaseAddress = new Uri("YOUR_PRODUCT_SERVICE_URL");
     });
     ```
 
-    Replace `https://localhost:5001` and `https://localhost:5002` with the actual URLs (including the port) of your running UserService and ProductService microservices.
-
-5.  **🚀 Running the MVC Application:**
-    Navigate to the `AgriEnergyConnectMVC` folder and run the following commands:
+5.  **Run the Website:** Finally, in the `AgriEnergyConnectMVC` folder, run:
 
     ```bash
-    cd AgriEnergyConnectMVC
     dotnet build
     dotnet run
     ```
 
-    This will typically launch the MVC application on `http://localhost:5xxx` (the port number will be indicated in the console output).
+    The website should open in your browser (usually at `http://localhost:5xxx`).
 
-## 📂 Key Code Locations
+## 📂 Where to Find Things in the Code
 
-* `AgriEnergyConnectMVC/Controllers/`: ⚙️ MVC Controllers responsible for handling user requests and communicating with the backend microservices.
-* `AgriEnergyConnectMVC/Models/`: 📊 MVC Models defining the ViewModels used in the MVC application.
-* `AgriEnergyConnectMVC/Views/`: 🖼️ Razor Views for rendering the user interface.
-* `AgriEnergyConnectMVC/wwwroot/css/site.css`: 🎨 Custom CSS Styles for the MVC application's theming and layout.
-* `AgriEnergyConnectMVC/wwwroot/js/site.js`: ✨ JavaScript Functionality for client-side interactions.
-* `AgriEnergyConnectMVC/_Layout.cshtml`: 🧱 The main layout file defining the overall structure of the application's pages.
-* `Microservices/UserService/`: 👤 Source code for the user management microservice.
-* `Microservices/ProductService/`: 📦 Source code for the product management microservice.
-
-Each microservice project will have its own controllers, models, and data access logic for its SQLite database.
+* `AgriEnergyConnectMVC/Controllers/`: Handles user actions and gets data.
+* `AgriEnergyConnectMVC/Models/`: How the application's data is structured.
+* `AgriEnergyConnectMVC/Views/`: Files that determine what the user sees.
+* `AgriEnergyConnectMVC/wwwroot/css/site.css`: Instructions for the website's appearance.
+* `AgriEnergyConnectMVC/wwwroot/js/site.js`: Code that makes the website interactive.
+* `AgriEnergyConnectMVC/_Layout.cshtml`: The basic structure of all web pages.
+* `Microservices/UserService/`: Code for managing user information.
+* `Microservices/ProductService/`: Code for managing product information.
 
 ## 📄 License
 
