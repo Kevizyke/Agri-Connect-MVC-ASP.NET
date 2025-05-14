@@ -110,12 +110,12 @@ If you want to run this application on your computer:
 ## 🛠️ Existing login credentials
 
 **Employee**
-username: employee1@example.com
-password: Employee123!
+* username: employee1@example.com
+* password: Employee123!
 
 **Farmer**
-username: farmer1@example.com
-password: Farmer123!
+* username: farmer1@example.com
+* password: Farmer123!
 
 ## 📂 Where to Find Things in the Code
 
