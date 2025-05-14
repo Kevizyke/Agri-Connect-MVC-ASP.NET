@@ -5,7 +5,7 @@
 
 ## 🎬 YouTube Video
 
-[![Watch the video](https://img.shields.io/badge/Watch-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)]([Link to your YouTube video about the app])
+[![Watch the video](https://img.shields.io/badge/Watch-YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)]([Link to YouTube video about the app])
 
 ## ✨ Key Features
 
