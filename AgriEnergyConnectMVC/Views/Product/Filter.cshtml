@@ -1,0 +1,77 @@
+﻿@model ProductFilterViewModel
+
+<h2 class="page-heading">Filter Products</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Category">Category</label>
+        <input asp-for="Category" class="form-control" />
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FromDate">From Date</label>
+        <input asp-for="FromDate" type="date" class="form-control" />
+        <span asp-validation-for="FromDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ToDate">To Date</label>
+        <input asp-for="ToDate" type="date" class="form-control" />
+        <span asp-validation-for="ToDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FarmerId">Filter by Farmer</label>
+        <select asp-for="FarmerId" class="form-control">
+            <option value="">All Farmers</option>
+            @if (Model.Farmers != null)
+            {
+                foreach (var farmer in Model.Farmers)
+                {
+                    <option value="@farmer.Id">@farmer.Email</option>
+                }
+            }
+        </select>
+        <span asp-validation-for="FarmerId" class="text-danger"></span>
+    </div>
+    <div class="form-group-button">
+        <button type="submit" class="btn btn-success w-100">SEARCH</button>
+    </div>
+</form>
+
+@if (Model.Results != null && Model.Results.Count > 0)
+{
+    <h3 class="filter-table-heading">Results:</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Production Date</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model.Results)
+            {
+                <tr>
+                    <td>
+                        @if (!string.IsNullOrEmpty(p.ImagePath))
+                        {
+                            <img src="@p.ImagePath" alt="@p.Name" style="width: 50px; height: auto;">
+                        }
+                        else
+                        {
+                            <span>No Image</span>
+                        }
+                    </td>
+                    <td>@p.Name</td>
+                    <td>@p.Category</td>
+                    <td>@p.ProductionDate.ToShortDateString()</td>
+                    <td>@p.Price.ToString("C")</td>
+                    <td>@p.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

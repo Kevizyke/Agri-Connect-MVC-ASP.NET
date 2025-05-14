@@ -1,0 +1,224 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/*Navbar*/
+
+/* Base navbar styles */
+.navbar {
+    background-color: #556B2F; /* DarkSeaGreen background */
+    border-bottom: 2px solid #556B2F; /* DarkOliveGreen bottom border */
+    padding: 0.7rem 1rem; /* Adjust vertical and horizontal padding */
+}
+
+/* Style for the brand/title (if you had one) */
+.navbar-brand {
+    color: #F0FFF0; /* Honeydew text */
+    font-weight: bold;
+}
+
+
+/* Styles for the navigation links */
+.navbar-nav .nav-link {
+    color: #F0FFF0; /* Honeydew text */
+    margin-right: 0.8rem; /* Spacing between links */
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Subtle dark overlay on hover */
+    color: #FFFFFF; /* White text on hover */
+    font-weight: bold;
+}
+
+/* Style for the active link (you might need to add an "active" class dynamically) */
+.nav-item .nav-link {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    /* Add other active styles */
+}
+
+
+/* Style for the "Hello, [user]!" text */
+.nav-logged-text {
+    font-family: "Josefin Sans", sans-serif;
+    color: #F0FFF0; /* Honeydew text */
+    margin-right: 0.8rem;
+    font-size: 20px;
+}
+
+/* Style for the logout button */
+.btn-outline-danger {
+    background-color: #860606;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    color: #FFDAB9; /* Peachpuff text */
+    border-color: #FFDAB9;
+}
+
+    .btn-outline-danger:hover {
+        background-color: #FFDAB9;
+        font-weight: bold;
+        color: #8B4513; /* SaddleBrown text on hover */
+        border-color: #FFDAB9;
+    }
+
+/* Style for the login link (if not authenticated) */
+.navbar-nav .nav-item a.nav-link[href="/Account/Login"] {
+    color: #FFDAB9; /* Peachpuff text */
+}
+
+    .navbar-nav .nav-item a.nav-link[href="/Account/Login"]:hover {
+        color: #FFFFFF;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+
+/*Body*/
+
+body {
+  margin-bottom: 60px;
+}
+
+body {
+     
+     background-image: url('/images/backgrounds/agriculture-1747235327464-5783.jpg'); 
+     background-size: cover; 
+     background-repeat: no-repeat; 
+}
+
+    body.dim-background::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
+        z-index: -1;
+    }
+
+    /* Ensure the home page doesn't have the overlay */
+    body:not(.dim-background)::before {
+        background-color: transparent; /* Or remove this if you don't have a default overlay */
+    }
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.border-top.footer.text-muted {
+    background-color: rgba(248, 248, 248, 0.8); /* Light gray with 90% opacity */
+    /* Keep other existing styles for the footer */
+    color: #6c757d !important; /* Ensure text color is readable */
+    padding-top: 0rem; /* Adjust as needed */
+    padding-bottom: 0rem; /* Make it the same as top padding */
+    line-height: 2.5;
+    text-align: center !important;
+    white-space: nowrap !important;
+    height: 5%; /* Example: Make the footer 80% of its parent's width */
+    margin-left: auto; /* Center the footer horizontally */
+    margin-right: auto;
+}
+
+.display-1 {
+    font-family: 'Berlin Sans FB', sans-serif; /* Or your chosen font */
+    font-weight: 700;
+    color: #b6ff00;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.9); /* Example shadow */
+    text-align: center !important;
+    /* Other styles for the heading */
+}
+
+.lead {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+    /*transform: translateY(-120%);*/
+    font-weight: bold;
+    color: #ffd800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.page-heading {
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #ffd800;
+    padding-top: 3rem;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.form-group {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    color: #b6ff00;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    max-width: 500px; /* Or your desired width */
+    padding-top: 0.5rem; /* Adjust as needed */
+    padding-bottom: 0rem;
+    margin-left: auto; /* To center the form group if needed */
+    margin-right: auto;
+}
+
+.form-group-button {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    color: #b6ff00;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    max-width: 300px; /* Or your desired width */
+    padding-top: 0.5rem; /* Adjust as needed */
+    padding-bottom: 1rem;
+    margin-left: auto; /* To center the form group if needed */
+    margin-right: auto;
+}
+
+.filter-table-heading {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+    padding-top: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    /*transform: translateY(-120%);*/
+    font-weight: bold;
+    color: #ffd800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.table {
+    font-family: "Josefin Sans", sans-serif;
+    max-width: 75%;
+    margin-left: auto; /* To center the form group if needed */
+    margin-right: auto;
+    /*text-transform: uppercase;*/
+    /* Add other active styles */
+}
+
+
+
+.card {
+    font-family: "Josefin Sans", sans-serif;
+}

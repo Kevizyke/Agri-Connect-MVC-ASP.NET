@@ -1,0 +1,33 @@
+﻿@model List<AgriEnergyConnectMVC.Models.FarmerViewModel>
+
+@{
+    ViewData["Title"] = "Farmer List";
+}
+
+<h2 class="page-heading">Farmer List</h2>
+
+@if (!Model.Any())
+{
+    <p>No farmers have been registered yet.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var farmer in Model)
+            {
+                <tr>
+                    <td>@farmer.Email</td>
+                    <td>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

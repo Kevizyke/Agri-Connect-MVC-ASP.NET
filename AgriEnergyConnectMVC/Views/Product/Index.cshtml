@@ -1,0 +1,55 @@
+﻿@model List<AgriEnergyConnectMVC.Models.ProductViewModel>
+@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "My Products";
+    var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+}
+
+@if (userRole == "Farmer")
+{
+    <h2 class="page-heading">My Products</h2>
+    <div class="form-group-button">
+        <a class="btn btn-success" asp-controller="Product" asp-action="Add">CLICK TO ADD PRODUCT</a>
+    </div>
+}
+
+@if (!Model.Any())
+{
+    <p>No products found.</p>
+}
+else
+{
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var product in Model)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    @if (!string.IsNullOrEmpty(product.ImagePath))
+                    {
+                        <img src="@product.ImagePath" class="card-img-top" alt="@product.Name" style="height: 200px; object-fit: cover;">
+                    }
+                    else
+                    {
+                        <img src="/images/products/placeholder.png" class="card-img-top" alt="No image available" style="height: 200px; object-fit: cover;">
+                    }
+
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>@product.Name</strong></h5>
+                        @if (!string.IsNullOrEmpty(product.Description))
+                        {
+                            <p class="card-text" style="font-size: 0.9em;">@product.Description</p>
+                        }
+                        <p class="card-text">
+                            <strong>Category:</strong> @product.Category <br />
+                            <strong>Produced On:</strong> @product.ProductionDate.ToShortDateString()
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-end bg-white border-top-0">
+                        <p class="card-text" style="color: green; font-weight: bold;">R @product.Price.ToString("0.00")</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
