@@ -107,6 +107,16 @@ If you want to run this application on your computer:
 
     The website should open in your browser (usually at `http://localhost:5xxx`).
 
+## 🛠️ Existing login credentials
+
+**Employee**
+username: employee1@example.com
+password: Employee123!
+
+**Farmer**
+username: farmer1@example.com
+password: Farmer123!
+
 ## 📂 Where to Find Things in the Code
 
 * `AgriEnergyConnectMVC/Controllers/`: Handles user actions and gets data.
