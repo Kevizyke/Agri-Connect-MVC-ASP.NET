@@ -13,7 +13,7 @@
 
 * ✅ **User Authentication:** Secure login and logout functionality for both employee and farmer roles, likely handled by an authentication microservice.
 * 🎨 **Responsive Design:** Utilizes Bootstrap for a consistent and responsive user interface across different devices.
-* <0xF0><0x9F><0xAA><0xB6> **Theming:** Custom styling applied, including an agricultural-themed navbar and a visually engaging home page with a background image and prominent text.
+* **Theming:** Custom styling applied, including an agricultural-themed navbar and a visually engaging home page with a background image and prominent text.
 
 **Employee Role:**
 
